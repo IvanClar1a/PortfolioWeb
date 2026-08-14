@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iván - Portfolio</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS EXTERNO -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <!-- ENCABEZADO FIJO -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-[#0B0F19]/80 backdrop-blur-md border-b border-gray-800/50">
+        <!-- Cambiamos el max-w para que se expanda más, y usamos padding px-6 md:px-12 -->
+        <nav class="flex items-center justify-between py-4 px-6 md:px-12 w-full">
+            
+            <!-- 1. LOGO: Empujado bien a la izquierda (ocupa 1/4 del espacio) -->
+            <div class="flex items-center gap-3 w-1/4">
+                <!-- Pequeña animación extra: el ícono </> gira un poquito al pasar el mouse -->
+                <div class="bg-purple-600 text-white font-bold py-1 px-2 rounded-md text-sm transition-transform duration-300 hover:rotate-12 cursor-default">
+                    &lt;/&gt;
+                </div>
+                <span class="text-xl font-bold tracking-wide text-purple-400">ivan.dev</span>
+            </div>
+
+            <!-- 2. ENLACES: Centrados exactamente en el medio de la pantalla -->
+            <ul class="hidden md:flex flex-1 justify-center gap-10 text-sm font-medium text-gray-300">
+                <li>
+                    <a href="#sobre-mi" class="relative group py-2 transition-colors duration-300 hover:text-white">
+                        Sobre mi
+                        <!-- Esta es la línea animada que aparece al hacer hover -->
+                        <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-purple-500 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#educacion" class="relative group py-2 transition-colors duration-300 hover:text-white">
+                        Educación
+                        <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-purple-500 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#habilidades" class="relative group py-2 transition-colors duration-300 hover:text-white">
+                        Habilidades
+                        <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-purple-500 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#proyectos" class="relative group py-2 transition-colors duration-300 hover:text-white">
+                        Proyectos
+                        <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-purple-500 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                </li>
+            </ul>
+
+            <!-- 3. ESPACIADOR / CONTACTO: Se va a la derecha (ocupa el otro 1/4 del espacio) -->
+            <div class="hidden md:flex justify-end w-1/4">
+                <!-- Animación de "flote" y un pequeño brillo al hacer hover para que destaque -->
+                <a href="#contacto" class="text-blue-500 font-medium px-4 py-2 rounded-lg border border-transparent transition-all duration-300 hover:text-white hover:-translate-y-1 hover:border-blue-500/50 hover:shadow-[0_0_15px_rgba(59,130,246,0.3)]">
+                    Contacto
+                </a>
+            </div>
+
+        </nav>
+    </header>
+
+    <!-- SECCIÓN PRINCIPAL (HERO) -->
+    <!-- Cambio aplicado: Se agregó pb-32 md:pb-40 para empujar el contenido hacia arriba -->
+    <main id="sobre-mi" class="min-h-screen flex items-center justify-center w-full pt-20 md:pt-0 pb-32 md:pb-40">
+        <div class="max-w-7xl mx-auto px-8 w-full flex flex-col-reverse md:flex-row items-center justify-between gap-12">
+            
+            <div class="md:w-1/2 space-y-2">
+                <p class="text-xl text-gray-100 font-semibold mb-2">Hola, soy</p>
+                <h1 class="text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-purple-600 pb-2">
+                    Iván Clariá
+                </h1>
+                <h2 class="text-purple-500 text-2xl font-bold efecto-escribir">
+                     Estudiante De Programación
+                </h2>
+                <p class="text-gray-400 text-sm md:text-base leading-relaxed max-w-lg mt-4">
+                    Desarrollador de software enfocado en el ecosistema <span class="text-emerald-500 font-medium">Java</span> y estudiante de la Tecnicatura Universitaria en Programación (UTN). 
+                    <br><br>
+                    Me apasiona construir aplicaciones eficientes utilizando el ecosistema de Java. Disfruto transformar problemas reales en soluciones tecnológicas, optimizando el rendimiento y diseñando arquitecturas de datos escalables.
+                </p>
+
+                <div class="flex flex-wrap gap-4 pt-6">
+                    <a href="CV/CV-IvanClaria.pdf" target="_blank" download="CV.pdf" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-lg font-medium flex items-center gap-2 transition shadow-lg shadow-blue-500/20 inline-flex w-max cursor-pointer">
+                        <i class="fa-solid fa-download" ></i> Descargar CV
+                    </a>
+                    
+                   <a href="#contacto" class="bg-transparent border border-gray-400 hover:border-white hover:text-white text-gray-300 px-6 py-2.5 rounded-lg font-medium flex items-center gap-2 transition inline-flex w-fit">
+                        <i class="fa-regular fa-envelope"></i> Contáctame
+                    </a>
+                </div>
+
+                <div class="flex gap-4 pt-6">
+                   <a href="https://github.com/IvanClar1a/IvanClar1a" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-white rounded-md flex items-center justify-center text-black hover:bg-gray-200 transition text-xl">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/iván-clariá-8007b9353" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-white rounded-md flex items-center justify-center text-black hover:bg-gray-200 transition text-xl">
+                         <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="md:w-1/2 flex justify-center md:justify-end lg:pr-10 mb-10 md:mb-0">
+                <div class="p-1 bg-gradient-to-r from-red-500 via-purple-500 to-blue-500 custom-shape shadow-[0_0_30px_rgba(168,85,247,0.2)]">
+                    <div class="bg-[#111424] p-1 custom-shape h-full w-full">
+                        <img 
+                            src="imagenes/PXL_20231213_124446276.jpg" 
+                            alt="Perfil de Iván" 
+                            class="w-[280px] h-[350px] md:w-[320px] md:h-[400px] object-cover custom-shape"
+                        >
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- SECCIÓN EDUCACIÓN -->
+    <section id="educacion" class="min-h-screen flex flex-col justify-center max-w-5xl mx-auto px-8 w-full py-10">
+        <h3 class="text-4xl md:text-5xl font-bold text-center neon-title mb-16 tracking-wide">Education</h3>
+        
+        <div class="relative border-l border-gray-700 md:border-l-0 md:flex md:flex-col md:items-center">
+            <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-[1px] h-full bg-gradient-to-b from-purple-500 via-red-500 to-transparent"></div>
+            
+            <div class="mb-12 relative flex w-full md:justify-start">
+                <div class="absolute -left-[6px] md:left-1/2 md:-translate-x-1/2 w-3 h-3 bg-purple-500 rounded-full ring-4 ring-[#111424]"></div>
+                <div class="pl-8 md:pl-0 md:w-1/2 md:pr-12 text-left">
+                    <div class="bg-[#181b31] border border-gray-800 hover:border-purple-500/50 transition-colors duration-300 p-6 rounded-xl shadow-lg relative group">
+                        <div class="hidden md:block absolute top-6 -right-3 w-0 h-0 border-t-[8px] border-t-transparent border-l-[12px] border-l-[#181b31] border-b-[8px] border-b-transparent group-hover:border-l-purple-500/50 transition-colors duration-300"></div>
+                        <span class="inline-block text-xs font-semibold text-emerald-400 bg-emerald-400/10 px-3 py-1 rounded-full mb-4">Presente</span>
+                        <h4 class="text-xl font-bold text-white mb-1">Tecnicatura Universitaria en Programación</h4>
+                        <p class="text-blue-400 font-medium mb-3">Universidad Tecnológica Nacional (UTN)</p>
+                        <p class="text-gray-400 text-sm leading-relaxed">Formación técnica enfocada en desarrollo de software, estructuras de datos (como árboles binarios), programación orientada a objetos y diseño integral de bases de datos.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="relative flex w-full md:justify-end">
+                <div class="absolute -left-[6px] md:left-1/2 md:-translate-x-1/2 w-3 h-3 bg-blue-500 rounded-full ring-4 ring-[#111424]"></div>
+                <div class="pl-8 md:pl-0 md:w-1/2 md:pl-12 text-left">
+                    <div class="bg-[#181b31] border border-gray-800 hover:border-blue-500/50 transition-colors duration-300 p-6 rounded-xl shadow-lg relative group">
+                        <div class="hidden md:block absolute top-6 -left-3 w-0 h-0 border-t-[8px] border-t-transparent border-r-[12px] border-r-[#181b31] border-b-[8px] border-b-transparent group-hover:border-r-blue-500/50 transition-colors duration-300"></div>
+                        <span class="inline-block text-xs font-semibold text-emerald-400 bg-emerald-400/10 px-3 py-1 rounded-full mb-4">20XX – 20XX</span>
+                        <h4 class="text-xl font-bold text-white mb-1">Educación Secundaria</h4>
+                        <p class="text-blue-400 font-medium mb-3">Nombre de tu Escuela</p>
+                        <p class="text-gray-400 text-sm leading-relaxed">Estudios con bases sólidas en lógica y resolución de problemas, preparando el terreno para el enfoque tecnológico.</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- SECCIÓN SKILLS -->
+    <section id="habilidades" class="max-w-5xl mx-auto px-8 w-full mb-32">
+        <h3 class="text-4xl md:text-5xl font-bold text-center neon-title mb-4 tracking-wide uppercase">Technical Skills</h3>
+        <p class="text-center text-gray-400 mb-12 max-w-2xl mx-auto text-sm md:text-base">Demostrando las habilidades técnicas y la experiencia que he construido a través del aprendizaje continuo y proyectos de desarrollo.</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-[#181b31] p-6 rounded-xl border-t-2 border-t-red-500 shadow-lg hover:shadow-red-500/10 transition-shadow">
+                <h4 class="text-lg font-semibold text-red-500 mb-4 border-b border-gray-700 pb-2">Programming Languages</h4>
+                <div class="flex flex-wrap gap-3">
+                    <span class="px-3 py-1.5 bg-[#111424] border border-gray-700 rounded-md text-sm text-gray-200 flex items-center gap-2"><i class="fa-solid fa-code text-blue-400"></i> C#</span>
+                    <span class="px-3 py-1.5 bg-[#111424] border border-gray-700 rounded-md text-sm text-gray-200 flex items-center gap-2"><i class="fa-brands fa-java text-orange-400"></i> Java</span>
+                    <span class="px-3 py-1.5 bg-[#111424] border border-gray-700 rounded-md text-sm text-gray-200 flex items-center gap-2"><i class="fa-brands fa-python text-yellow-400"></i> Python</span>
+                </div>
+            </div>
+            <div class="bg-[#181b31] p-6 rounded-xl border-t-2 border-t-purple-500 shadow-lg hover:shadow-purple-500/10 transition-shadow">
+                <h4 class="text-lg font-semibold text-purple-500 mb-4 border-b border-gray-700 pb-2">Databases</h4>
+                <div class="flex flex-wrap gap-3">
+                    <span class="px-3 py-1.5 bg-[#111424] border border-gray-700 rounded-md text-sm text-gray-200 flex items-center gap-2"><i class="fa-solid fa-database text-blue-300"></i> SQL Server / MySQL</span>
+                    <span class="px-3 py-1.5 bg-[#111424] border border-gray-700 rounded-md text-sm text-gray-200 flex items-center gap-2"><i class="fa-solid fa-leaf text-green-500"></i> MongoDB</span>
+                    <span class="px-3 py-1.5 bg-[#111424] border border-gray-700 rounded-md text-sm text-gray-200 flex items-center gap-2"><i class="fa-solid fa-server text-red-400"></i> Redis</span>
+                </div>
+            </div>
+            <div class="bg-[#181b31] p-6 rounded-xl border-t-2 border-t-blue-500 shadow-lg hover:shadow-blue-500/10 transition-shadow">
+                <h4 class="text-lg font-semibold text-blue-500 mb-4 border-b border-gray-700 pb-2">Frameworks & Development</h4>
+                <div class="flex flex-wrap gap-3">
+                    <span class="px-3 py-1.5 bg-[#111424] border border-gray-700 rounded-md text-sm text-gray-200 flex items-center gap-2"><i class="fa-brands fa-windows text-blue-500"></i> Windows Forms</span>
+                    <span class="px-3 py-1.5 bg-[#111424] border border-gray-700 rounded-md text-sm text-gray-200 flex items-center gap-2"><i class="fa-solid fa-cube text-purple-400"></i> .NET Framework</span>
+                </div>
+            </div>
+            <div class="bg-[#181b31] p-6 rounded-xl border-t-2 border-t-emerald-500 shadow-lg hover:shadow-emerald-500/10 transition-shadow">
+                <h4 class="text-lg font-semibold text-emerald-500 mb-4 border-b border-gray-700 pb-2">Tools & Fundamentals</h4>
+                <div class="flex flex-wrap gap-3">
+                    <span class="px-3 py-1.5 bg-[#111424] border border-gray-700 rounded-md text-sm text-gray-200 flex items-center gap-2"><i class="fa-brands fa-git-alt text-orange-500"></i> Git</span>
+                    <span class="px-3 py-1.5 bg-[#111424] border border-gray-700 rounded-md text-sm text-gray-200 flex items-center gap-2"><i class="fa-brands fa-github text-white"></i> GitHub</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN PROJECTS -->
+    <section id="proyectos" class="max-w-6xl mx-auto px-8 w-full mb-32">
+        <h3 class="text-4xl md:text-5xl font-bold text-center neon-title mb-4 tracking-wide uppercase">Projects</h3>
+        <p class="text-center text-gray-400 mb-12 max-w-2xl mx-auto text-sm md:text-base">Proyectos prácticos creados para aplicar conocimientos, resolver problemas reales y demostrar experiencia técnica en el desarrollo.</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-[#181b31] border border-gray-800 rounded-xl overflow-hidden flex flex-col hover:border-purple-500/30 transition-colors duration-300 shadow-lg group">
+                <div class="h-48 bg-[#0f111a] flex items-center justify-center p-4 border-b border-gray-800 overflow-hidden relative">
+                    <div class="w-full h-full bg-gradient-to-br from-gray-800 to-gray-900 rounded flex items-center justify-center text-gray-500 opacity-80 group-hover:scale-105 transition-transform duration-500">
+                        <i class="fa-brands fa-whatsapp text-5xl text-emerald-500/50"></i>
+                    </div>
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <h4 class="text-xl font-bold text-white mb-3">WhatsApp Task Automator</h4>
+                    <p class="text-gray-400 text-sm mb-6 flex-grow leading-relaxed">Aplicación de consola desarrollada en C# que utiliza la API de CallMeBot para enviar recordatorios automatizados mediante WhatsApp. Implementa un sistema lógico para alternar turnos asignados basándose en fechas del calendario, con ejecución programada estrictamente a las 21:29 horas de forma diaria.</p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="px-2 py-1 bg-purple-900/30 text-purple-300 border border-purple-800/50 rounded text-xs font-medium">C#</span>
+                        <span class="px-2 py-1 bg-purple-900/30 text-purple-300 border border-purple-800/50 rounded text-xs font-medium">CallMeBot API</span>
+                    </div>
+                    <div class="flex gap-4">
+                        <a href="#" class="flex-1 text-center py-2.5 bg-[#111424] hover:bg-gray-800 border border-gray-700 rounded-lg text-sm font-medium transition text-gray-200">
+                            <i class="fa-brands fa-github mr-1"></i> Ver Código
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-[#181b31] border border-gray-800 rounded-xl overflow-hidden flex flex-col hover:border-blue-500/30 transition-colors duration-300 shadow-lg group">
+                <div class="h-48 bg-[#0f111a] flex items-center justify-center p-4 border-b border-gray-800 overflow-hidden relative">
+                    <div class="w-full h-full bg-gradient-to-br from-gray-800 to-gray-900 rounded flex items-center justify-center text-gray-500 opacity-80 group-hover:scale-105 transition-transform duration-500">
+                        <i class="fa-solid fa-server text-5xl text-blue-500/50"></i>
+                    </div>
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <h4 class="text-xl font-bold text-white mb-3">Hybrid DB Desktop Manager</h4>
+                    <p class="text-gray-400 text-sm mb-6 flex-grow leading-relaxed">Sistema de escritorio con Windows Forms para la gestión y serialización de datos de alto rendimiento. Implementa programación orientada a objetos (OOP) para comparar eficiencia y manejar migraciones entre un entorno relacional clásico (SQL) y una arquitectura NoSQL con MongoDB.</p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="px-2 py-1 bg-blue-900/30 text-blue-300 border border-blue-800/50 rounded text-xs font-medium">Windows Forms</span>
+                        <span class="px-2 py-1 bg-blue-900/30 text-blue-300 border border-blue-800/50 rounded text-xs font-medium">C#</span>
+                        <span class="px-2 py-1 bg-blue-900/30 text-blue-300 border border-blue-800/50 rounded text-xs font-medium">MongoDB</span>
+                    </div>
+                    <div class="flex gap-4">
+                        <a href="#" class="flex-1 text-center py-2.5 bg-[#111424] hover:bg-gray-800 border border-gray-700 rounded-lg text-sm font-medium transition text-gray-200">
+                            <i class="fa-brands fa-github mr-1"></i> Ver Código
+                        </a>
+                        <a href="#" class="flex-1 text-center py-2.5 bg-blue-600 hover:bg-blue-700 rounded-lg text-sm font-medium transition text-white">
+                            <i class="fa-solid fa-desktop mr-1"></i> Demo UI
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN CONTACTO -->
+    <section id="contacto" class="max-w-5xl mx-auto px-8 w-full mb-32">
+        <h3 class="text-4xl md:text-5xl font-bold text-center neon-title mb-16 tracking-wide">Contact</h3>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <!-- Columna Izquierda: Información -->
+            <div class="bg-[#181b31] p-8 rounded-xl border border-gray-800 shadow-lg">
+                <h4 class="text-2xl font-bold text-white mb-4">Let's Connect</h4>
+                <p class="text-gray-400 mb-8 text-sm md:text-base leading-relaxed">
+                    I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+                </p>
+                
+                <div class="flex flex-col gap-6">
+                    <a href="mailto:tuemail@ejemplo.com" class="flex items-center gap-4 text-gray-300 hover:text-purple-400 transition">
+                        <i class="fa-regular fa-envelope text-2xl"></i>
+                        <span class="font-medium">Gmail</span>
+                    </a>
+                    <a href="#" target="_blank" class="flex items-center gap-4 text-gray-300 hover:text-blue-400 transition">
+                        <i class="fa-brands fa-linkedin text-2xl"></i>
+                        <span class="font-medium">linkedin</span>
+                    </a>
+                    <a href="#" target="_blank" class="flex items-center gap-4 text-gray-300 hover:text-white transition">
+                        <i class="fa-brands fa-github text-2xl"></i>
+                        <span class="font-medium">github</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Columna Derecha: Formulario -->
+            <div class="bg-[#181b31] p-8 rounded-xl border border-gray-800 shadow-lg">
+                <form class="flex flex-col gap-5">
+                    
+                    <div class="relative">
+                        <input type="text" placeholder="Your Name" class="w-full bg-[#111424] border border-gray-700 text-white rounded-lg px-4 py-3 focus:outline-none focus:border-purple-500 transition shadow-inner">
+                    </div>
+                    
+                    <div class="relative">
+                        <input type="email" placeholder="Your Email" class="w-full bg-[#111424] border border-gray-700 text-white rounded-lg px-4 py-3 focus:outline-none focus:border-purple-500 transition shadow-inner">
+                        <!-- Ícono decorativo tipo 'asterisco' como en la imagen -->
+                        <i class="fa-solid fa-asterisk absolute right-4 top-4 text-purple-500 text-sm opacity-60"></i>
+                    </div>
+                    
+                    <div class="relative">
+                        <textarea placeholder="Your Message" rows="4" class="w-full bg-[#111424] border border-gray-700 text-white rounded-lg px-4 py-3 focus:outline-none focus:border-purple-500 transition shadow-inner resize-none"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="w-full mt-2 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3.5 rounded-lg transition shadow-[0_0_15px_rgba(168,85,247,0.4)]">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+            
+        </div>
+    </section>
+
+</body>
+</html>

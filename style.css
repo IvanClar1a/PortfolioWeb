@@ -1,0 +1,57 @@
+/* Importación de la fuente web */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+html {
+    scroll-behavior: smooth;
+}
+/* Estilos base del documento */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #111424; 
+    color: #ffffff;
+}
+
+/* Animación para el cursor titilante en el Hero */
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.cursor-blink {
+    animation: blink 1s step-end infinite;
+}
+
+/* Forma personalizada asimétrica para la foto de perfil */
+.custom-shape {
+    border-radius: 1rem 4rem 1rem 4rem;
+}
+
+/* Efecto de brillo neón para los títulos de sección */
+.neon-title {
+    color: #a855f7;
+    text-shadow: 0 0 15px rgba(168, 85, 247, 0.4);
+}
+/* Clase que le daremos a los textos */
+.efecto-escribir {
+    overflow: hidden; /* Oculta el texto que aún no aparece */
+    white-space: nowrap; /* Evita que el texto baje a otra línea */
+    border-right: 3px solid currentColor; /* Crea el cursor al final de la letra usando el color del texto */
+    width: max-content; /* Ajusta el contenedor al tamaño del texto */
+    max-width: 0; /* Inicia escondido */
+    
+    /* Ejecuta la animación de escribir y el parpadeo del cursor */
+    animation: 
+        escribiendo 2.5s steps(30, end) forwards, 
+        parpadeo 0.8s step-end infinite;
+}
+
+/* Animación para que el ancho crezca simulando el tecleo */
+@keyframes escribiendo {
+    from { max-width: 0; }
+    to { max-width: 100%; }
+}
+
+/* Animación para que el cursor titile */
+@keyframes parpadeo {
+    from, to { border-color: transparent; }
+    50% { border-color: currentColor; }
+}
