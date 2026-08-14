@@ -30,26 +30,27 @@ body {
     color: #a855f7;
     text-shadow: 0 0 15px rgba(168, 85, 247, 0.4);
 }
-/* Clase que le daremos a los textos */
+/* Clase actualizada para que la animación sea infinita */
 .efecto-escribir {
-    overflow: hidden; /* Oculta el texto que aún no aparece */
-    white-space: nowrap; /* Evita que el texto baje a otra línea */
-    border-right: 3px solid currentColor; /* Crea el cursor al final de la letra usando el color del texto */
-    width: max-content; /* Ajusta el contenedor al tamaño del texto */
-    max-width: 0; /* Inicia escondido */
+    overflow: hidden; 
+    white-space: nowrap; 
+    border-right: 3px solid currentColor; 
+    width: max-content; 
     
-    /* Ejecuta la animación de escribir y el parpadeo del cursor */
+    /* Cambiamos a 8 segundos en total y la hacemos infinite */
     animation: 
-        escribiendo 2.5s steps(30, end) forwards, 
-        parpadeo 0.8s step-end infinite;
+    escribiendo 7s steps(30, end) infinite, 
+    parpadeo 0.8s step-end infinite;
 }
 
-/* Animación para que el ancho crezca simulando el tecleo */
+/* Animación con los tiempos ajustados */
 @keyframes escribiendo {
-    from { max-width: 0; }
-    to { max-width: 100%; }
+    0% { max-width: 0; }           /* 0s: Empieza oculto */
+    20% { max-width: 100%; }       /* Se escribe durante ~1.6 segundos */
+    80% { max-width: 100%; }       /* Se queda pausado y visible durante ~4.8 segundos */
+    95% { max-width: 0; }          /* Se "borra" rápido hacia atrás */
+    100% { max-width: 0; }         /* Breve pausa antes de volver a empezar */
 }
-
 /* Animación para que el cursor titile */
 @keyframes parpadeo {
     from, to { border-color: transparent; }
